@@ -25,6 +25,7 @@ public class GeneratorSqlmap {
 		// 方法二  通过绝对路径获取
 //		File configFile = new File("F:\\devmProject\\myProject\\sysarch-generator\\src\\main\\resources\\generatorConfig.xml");
 		// 方法三()  Resources是mybatis的一个类在org.apache.ibatis.io.Resources路径下面
+        // 其实Resources.getResourceAsFile("generator-config/generatorConfig.xml")的实现原理就是封装了方法一
 		File configFile = Resources.getResourceAsFile("generator-config/generatorConfig.xml");
 		// 获取mybatis配置文件的File对象的三种方法 end
 		ConfigurationParser cp = new ConfigurationParser(warnings);
